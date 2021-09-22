@@ -77,6 +77,6 @@ class BodyParam (url: String, method: Method) : AbstractBodyParam<BodyParam>(url
     }
 
     override fun add(key: String, value: Any?): BodyParam {
-        TODO("Not yet implemented")
+       return this
     }
 }

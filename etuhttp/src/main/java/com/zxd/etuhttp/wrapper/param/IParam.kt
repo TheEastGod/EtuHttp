@@ -24,7 +24,7 @@ interface IParam<P : Param<P>>{
 
     fun removeAllQuery(key :String) : P
 
-    fun addQuery(key: String,value: Any) : P
+    fun addQuery(key: String,value: Any?) : P
 
     fun addEncodedQuery(key: String,value: Any) : P
 

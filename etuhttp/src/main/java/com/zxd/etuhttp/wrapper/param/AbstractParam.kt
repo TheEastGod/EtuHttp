@@ -30,8 +30,10 @@ abstract class AbstractParam <P :Param<P>> constructor(url: String,method: Metho
         return this as P
     }
 
-    override fun addQuery(key: String, value: Any): P {
-        return addQuery(KeyValuePair(key,value))
+    override fun addQuery(key: String, value: Any?): P {
+        var mValue = value
+        if (mValue == null) mValue = ""
+        return addQuery(KeyValuePair(key,mValue))
     }
 
     override fun addEncodedQuery(key: String, value: Any): P {

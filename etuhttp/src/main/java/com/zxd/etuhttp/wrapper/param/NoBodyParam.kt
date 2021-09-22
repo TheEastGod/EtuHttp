@@ -12,8 +12,10 @@ import okhttp3.RequestBody
 class NoBodyParam(url: String, method: Method) : AbstractParam<NoBodyParam>(url, method) {
 
 
-    override fun add(key: String, value: Any): NoBodyParam {
-       return addQuery(key, value)
+    override fun add(key: String, value: Any?): NoBodyParam {
+        var mValue = value
+        if (mValue == null) mValue = ""
+       return addQuery(key, mValue)
     }
 
     fun addEncoded(key: String,value: Any): NoBodyParam{

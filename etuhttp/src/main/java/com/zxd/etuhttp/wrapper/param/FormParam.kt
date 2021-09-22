@@ -21,8 +21,10 @@ class FormParam(url: String, method: Method) : AbstractBodyParam<FormParam>(url,
     private var partList //Part List
             : MutableList<MultipartBody.Part>? = null
 
-    override fun add(key: String, value: Any): FormParam {
-       return add(KeyValuePair(key, value))
+    override fun add(key: String, value: Any?): FormParam {
+        var mValue = value
+        if (mValue == null) mValue = ""
+        return add(KeyValuePair(key, mValue))
     }
 
     fun addEncoded(key: String, value: Any?): FormParam {
