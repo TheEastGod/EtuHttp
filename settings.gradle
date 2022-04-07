@@ -2,4 +2,5 @@ include ':etuhttp-annotation'
 include ':etuhttp-compiler'
 include ':etuhttp'
 include ':app'
+include ':dlog'
 rootProject.name = "EtuHttp"

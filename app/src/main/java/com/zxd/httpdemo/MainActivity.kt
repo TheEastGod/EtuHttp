@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.zxd.dlog.DLog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MockWebServerHandler.MockWebServerCallBack {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity(), MockWebServerHandler.MockWebServerCall
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        DLog.init()
 
         MockWebServerHandler.instances.setMockWebServerCallBack(this)
         MockWebServerHandler.instances.connect()
