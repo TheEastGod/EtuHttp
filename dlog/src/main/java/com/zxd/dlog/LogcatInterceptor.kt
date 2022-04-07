@@ -7,7 +7,7 @@ import android.util.Log
  * created on: 2022/3/18 16:52
  * description:
  */
-class LogcatInterceptor : LogInterceptor {
+open class LogcatInterceptor : LogInterceptor {
 
     override fun log(priority: Int, tag: String, log: String, chain: Chain) {
         if (enable()) {
