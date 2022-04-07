@@ -1,14 +1,20 @@
 package com.zxd.etuhttp.wrapper;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import com.zxd.etuhttp.wrapper.param.Param;
 import com.zxd.etuhttp.wrapper.parse.IConverter;
 
 import java.io.Closeable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Objects;
 
 import okhttp3.Headers;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import okhttp3.internal.Util;
 
 /**
@@ -58,6 +64,11 @@ public class OkHttpCompat {
         return response.headers();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public static ResponseBody requireBody(Response response) {
+        ResponseBody body = response.body();
+        return Objects.requireNonNull(body, "response with no body");
+    }
 
     public static void closeQuietly(Response response) {
         if (response == null) return;

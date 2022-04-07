@@ -14,7 +14,7 @@ class EtuHttpPlugins {
     companion object{
 
         private var mOnParamAssembly : Function<in Param<*> , out Param<*>>? = null
-
+        private var decoder: Function<String, String>? = null
 
         //设置公共参数装饰
         fun setOnParamAssembly(onParamAssembly: Function<in Param<*>, out Param<*>>) {
@@ -46,6 +46,26 @@ class EtuHttpPlugins {
             } catch (ex: Throwable) {
                 throw wrapOrThrow(ex)
             }
+        }
+
+
+        //设置解码/解密器,可用于对Http返回的String 字符串解码/解密
+        fun setResultDecoder(decoder : Function<String, String>) {
+            EtuHttpPlugins.decoder = decoder
+        }
+
+        /**
+         * 对字符串进行解码/解密
+         *
+         * @param source String字符串
+         * @return 解码/解密后字符串
+         */
+        @JvmStatic
+        fun onResultDecoder(source: String): String {
+            val f: Function<String, String>? = decoder
+            return if (f != null) {
+                apply(f, source)
+            } else source
         }
     }
 
