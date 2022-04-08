@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字符串中只有字符'('和')'。合法字符串需要括号可以配对。比如：输入：() 输出：true" />
+
+            <EditText
+                android:id="@+id/edit_text_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="()()(())" />
+
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算" />
+
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在水中有许多鱼，可以认为这些鱼停放在 x 轴上。再给定两个数组 Size，Dir，Size[i] 表示第 i 条鱼的大小，Dir[i] 表示鱼的方向 （0 表示向左游，1 表示向右游）。这两个数组分别表示鱼的大小和游动的方向，并且两个数组的长度相等。鱼的行为符合以下几个条件:
+所有的鱼都同时开始游动，每次按照鱼的方向，都游动一个单位距离；
+当方向相对时，大鱼会吃掉小鱼；鱼的大小都不一样。" />
+
+            <EditText
+                android:id="@+id/edit_text_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="4, 2, 5, 3, 1" />
+
+            <EditText
+                android:id="@+id/edit_text_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1, 1, 0, 0, 0" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算" />
+
+            <TextView
+                android:id="@+id/text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="【题目】一个整数数组 A，找到每个元素：右边第一个比我小的下标位置，没有则用 -1 表示。" />
+
+            <EditText
+                android:id="@+id/edit_text_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1, 2, 4, 9, 4, 0, 5" />
+
+            <Button
+                android:id="@+id/button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算" />
+
+            <TextView
+                android:id="@+id/text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="【题目】给定一个正整数数组和 k，要求依次取出 k 个数，输出其中数组的一个子序列，需要满足：1. 长度为 k；2.字典序最小。" />
+
+            <EditText
+                android:id="@+id/edit_text_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="9,2,4,5,1,2,3,0" />
+
+            <EditText
+                android:id="@+id/edit_text_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算" />
+
+            <TextView
+                android:id="@+id/text_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button_99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算" />
+
+    </LinearLayout>
+
+</ScrollView>
